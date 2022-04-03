@@ -20,6 +20,9 @@ browser.get("https://mbasic.facebook.com")
 cookies = pickle.load(open("my_cookie.pkl", "rb"))
 for cookie in cookies:
     browser.add_cookie(cookie)
+
+##########################################################################################
+
 for post in post_list:
     os.mkdir("D:/CS232_Crawler/facebook/status/" + str(post))
 
