@@ -99,7 +99,7 @@ for each in items:
     except:
         pass
 
-df1.to_csv(name + ".csv", index_label="No.")
+df1.to_csv("papers/" + name + ".csv", index_label="No.")
 
 sleep(2)
 browser.close()
