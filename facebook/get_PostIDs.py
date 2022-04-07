@@ -1,7 +1,6 @@
 import pickle
 from selenium import webdriver
 from time import sleep
-import pandas as pd
 import os
 
 def readData(fileName):
@@ -57,3 +56,4 @@ getnumOfPostFanpage(browser, 'FcThuyTien', 10, 'D:/CS232_Crawler/facebook/posts.
 
 sleep(1)
 browser.close()
+

@@ -4,7 +4,6 @@ import pandas as pd
 from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import InvalidSessionIdException, NoSuchElementException
 
 post_list = []
 
@@ -39,12 +38,7 @@ for post in post_list:
         f.write("\n\n")
         f.write("Ngày đăng: " + date)
 
-    # sleep(2)
     button_id = "see_next_" + str(post)
-
-    # cmt_list = browser.find_elements(By.CLASS_NAME, "ed")
-    # for cmt in cmt_list[0:len(cmt_list) -1]:
-
     count = 0
 
     for i in range(1, 11):
@@ -69,14 +63,6 @@ for post in post_list:
             button = button.find_element(By.TAG_NAME, "a")
             button.click()
             sleep(1)
-
-            # cmt_list = browser.find_elements(By.CLASS_NAME, "ed")
-            # for cmt in cmt_list[1:len(cmt_list) -1]:
-            #     name = cmt.find_element(By.TAG_NAME, "a").text
-            #     cmt_content = cmt.find_element(By.CLASS_NAME, "eg").text
-            #     df2 = pd.DataFrame({"Name": [name],
-            #                         "Comment": [cmt_content]})
-            #     df1 = pd.concat([df1, df2], axis=0, ignore_index=True)
 
             for i in range(2, 12):
                 if (count <= full_count):
